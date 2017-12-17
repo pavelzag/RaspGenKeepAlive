@@ -20,4 +20,4 @@ def keep_alive():
     return '{} {}'.format(time_stamp, 'keep on keeping on')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='generator-keep-alive.herokuapp.com', debug=True)
