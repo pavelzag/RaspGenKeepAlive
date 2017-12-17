@@ -16,7 +16,7 @@ def get_current_time():
 @app.route('/')
 def keep_alive():
     time_stamp = get_current_time()
-    # set_keep_alive(time_stamp)
+    set_keep_alive(time_stamp)
     return '{} {}'.format(time_stamp, 'keep on keeping on')
 
 if __name__ == '__main__':
