@@ -4,7 +4,7 @@ import time
 from logger import logging_handler
 
 
-url = 'http://0.0.0.0:5000/keep_alive'
+url = 'https://generator-keep-alive.herokuapp.com:5000/keep_alive'
 
 
 def get_current_time():
