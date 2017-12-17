@@ -6,9 +6,9 @@ from logger import logging_handler
 from send_mail import send_mail
 
 failure = False
-sleep_time = 30
+sleep_time = 10
 fail_sleep_time = 2
-keep_alive_threshold = 3000
+keep_alive_threshold = 12
 owner = get_config('owner')
 
 
@@ -24,6 +24,7 @@ if __name__ == '__main__':
         time_delta = check_time_delta(keep_alive_ts)
         logging_handler(str(time_delta))
         if time_delta > timedelta(minutes=keep_alive_threshold):
+            sleep_time = 300
             failure = True
             msg = '{} {} {}'.format('No keep alive for over', keep_alive_threshold, 'minutes')
             logging_handler(msg)
