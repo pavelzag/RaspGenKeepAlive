@@ -13,7 +13,7 @@ def get_current_time():
     return time_stamp
 
 
-@app.route('/keep_alive')
+@app.route('/')
 def keep_alive():
     time_stamp = get_current_time()
     set_keep_alive(time_stamp)
